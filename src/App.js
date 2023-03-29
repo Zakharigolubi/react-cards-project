@@ -8,13 +8,13 @@ import 'react-toastify/dist/ReactToastify.css'
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path='/' element={<MainLayout />}>
           <Route path='' element={<MainPage />} />
-          <Route path='create' element={<CreatePage />} />
-          <Route path='edit/:userId' element={<CreatePage />} />
-          <Route path='resume/:userId' element={<ResumePage />} />
+          <Route path='/create' element={<CreatePage />} />
+          <Route path='/edit/:userId' element={<CreatePage />} />
+          <Route path='/resume/:userId' element={<ResumePage />} />
         </Route>
       </Routes>
       <ToastContainer />
