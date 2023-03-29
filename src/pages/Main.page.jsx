@@ -23,7 +23,7 @@ const MainPage = () => {
   return (
     <div>
       <p className='fs-4 fst-normal mt-3 mb-3'>Карточки студентов:</p>
-      {!resume ? (
+      {resume.length === 0 ? (
         <p className='fs-6 fst-normal'>Нет данных</p>
       ) : (
         resume.map((res) => {
