@@ -63,7 +63,10 @@ const CreatePage = () => {
         localStorage.setItem('resume', JSON.stringify(arrResume))
       }
     }
-    toast('Данные обновлены', { autoClose: 2000 })
+    toast(
+      !isEditPage ? 'Добавлена новая карточка студента!' : 'Данные обновлены!',
+      { autoClose: 2000 }
+    )
     setTimeout(() => {
       navigate(`/resume/${id}`)
     }, 3000)
